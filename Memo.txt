@@ -1,0 +1,6 @@
+commande git :
+
+git status
+git add "fichier ou dossier"
+git commit -m "modifications apportées description"
+git push
