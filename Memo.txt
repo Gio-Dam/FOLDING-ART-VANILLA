@@ -4,3 +4,6 @@ git status
 git add .
 git commit -m "modifications apportées description"
 git push
+
+
+si changement d'ordi faire : git pull 
