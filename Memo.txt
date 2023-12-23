@@ -3,7 +3,12 @@ commande git :
 git status
 git add .
 git commit -m "modifications apportées description"
-git push
+git push -u origin nom de la branche
 
 
 si changement d'ordi faire : git pull 
+
+
+
+
+
