@@ -1,15 +1,16 @@
 commande git :
 
-git status
-git add .
+git add . #ajouter les changements du dossier
+git status #voir si pris en compte 
 git commit -m "modifications apportées description"
-git push -u origin nom de la branche
+git push #push vers ma branche main 
+git push -u origin public #push de la branche main vers branche public 
 
 
-si changement d'ordi faire : git pull 
+pour travailler sur un autre pc :
 
-x
-
+git clone https://github.com/Gio-Dam/folding-art/tree/main #copier la repo pour travailler. a faire qu'une seule fois
+git pull #charger sur le fichier les changements effectuer sur la repo
 
 
 
