@@ -1,10 +1,4 @@
-/*
 
-TemplateMo 546 Sixteen Clothing
-
-https://templatemo.com/tm-546-sixteen-clothing
-
-*/
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -1273,6 +1267,10 @@ footer .inner-content p a {
     transform: scale(1.1);
 }
 
+a h4  {
+	font-size: 1em;
+	color: #121212;
+}
 
 .instagram-post {
     width: 80%;
@@ -1309,6 +1307,32 @@ footer .inner-content p a {
     font-size: 14px;
     line-height: 1.5;
 }
+
+
+.profile-container {
+	display: flex;
+	gap: 20px; /* Espace entre les photos */
+  }
+
+  .profile-item {
+	position: relative;
+	width: 150px; /* Ajustez la largeur selon vos besoins */
+	height: 150px; /* Ajustez la hauteur selon vos besoins */
+	border-radius: 50%; /* Crée un cercle en arrondissant les coins */
+	overflow: hidden;
+	border: 3px solid #fff; /* Cercle très fin autour de la photo */
+	transition: transform 0.3s ease-in-out; /* Ajoute une transition pour agrandir en douceur */
+  }
+
+  .profile-item:hover {
+	transform: scale(1.2); /* Agrandit l'image lors du survol */
+  }
+
+  .profile-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ajuste la taille de l'image pour couvrir complètement le cercle */
+  }
 
 /* Ajout de styles pour les écrans plus petits (responsive) */
 @media screen and (max-width: 768px) {
