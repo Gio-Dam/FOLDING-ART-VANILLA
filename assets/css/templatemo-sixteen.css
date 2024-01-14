@@ -1072,6 +1072,10 @@ footer .inner-content p a {
 		right: 0;
 		bottom: 0;
 	}
+	img.ecommerce{
+		display: flex;
+    	align-items: center;
+	}
 }
 
 
