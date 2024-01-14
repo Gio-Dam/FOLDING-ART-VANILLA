@@ -1,10 +1,4 @@
-/*
 
-TemplateMo 546 Sixteen Clothing
-
-https://templatemo.com/tm-546-sixteen-clothing
-
-*/
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -1078,6 +1072,10 @@ footer .inner-content p a {
 		right: 0;
 		bottom: 0;
 	}
+	img.ecommerce{
+		display: flex;
+    	align-items: center;
+	}
 }
 
 
@@ -1247,6 +1245,99 @@ footer .inner-content p a {
     height: auto;
 }
 
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+a h4  {
+	font-size: 1em;
+	color: #121212;
+}
+
+.instagram-post {
+    width: 80%;
+    max-width: 600px; /* Ajustez la largeur maximale selon vos besoins */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Ceci centre l'élément horizontalement */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.description {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.profile-container {
+	display: flex;
+	gap: 20px; /* Espace entre les photos */
+  }
+
+  .profile-item {
+	position: relative;
+	width: 150px; /* Ajustez la largeur selon vos besoins */
+	height: 150px; /* Ajustez la hauteur selon vos besoins */
+	border-radius: 50%; /* Crée un cercle en arrondissant les coins */
+	overflow: hidden;
+	border: 3px solid #fff; /* Cercle très fin autour de la photo */
+	transition: transform 0.3s ease-in-out; /* Ajoute une transition pour agrandir en douceur */
+  }
+
+  .profile-item:hover {
+	transform: scale(1.2); /* Agrandit l'image lors du survol */
+  }
+
+  .profile-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ajuste la taille de l'image pour couvrir complètement le cercle */
+  }
+
 /* Ajout de styles pour les écrans plus petits (responsive) */
 @media screen and (max-width: 768px) {
     .product-container {
@@ -1267,3 +1358,4 @@ footer .inner-content p a {
         margin: 0.5rem 0;
     }
 }
+
