@@ -3446,3 +3446,27 @@
 	}
 
 })(window.Zepto || window.jQuery, window, document);
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Sélectionnez votre carousel
+    var owl = document.querySelector('.owl-banner');
+
+    // Définissez l'index initial de la bannière
+    var currentIndex = 0;
+
+    // Fonction pour changer la bannière
+    function changeBanner() {
+      // Masquer toutes les bannières
+      var banners = document.querySelectorAll('.owl-banner .banner-item');
+      banners.forEach(function (banner) {
+        banner.style.display = 'none';
+      });
+
+      // Afficher la bannière suivante
+      currentIndex = (currentIndex + 1) % banners.length;
+      banners[currentIndex].style.display = 'block';
+    }
+
+    // Définissez l'intervalle pour changer la bannière toutes les 5 secondes
+    var bannerInterval = setInterval(changeBanner, 5000);
+  });
