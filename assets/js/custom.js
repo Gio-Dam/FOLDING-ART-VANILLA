@@ -1,6 +1,3 @@
-
-
-
 jQuery( document ).ready(function( $ ) {
 
 
@@ -142,42 +139,46 @@ jQuery( document ).ready(function( $ ) {
             nextArrow:'<button class="NextArrow"></button>', 
         });
 
-        $('.filters ul li').click(function(){
+        // Initialisation de la grille Isotope
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".all"
+        }
+    });
+
+
+
+    // Gestion des clics sur les filtres
+    $('.filters ul li').click(function() {
         $('.filters ul li').removeClass('active');
         $(this).addClass('active');
-          
-          var data = $(this).attr('data-filter');
-          $grid.isotope({
+
+        var data = $(this).attr('data-filter');
+        $grid.isotope({
             filter: data
-          })
         });
+    });
 
-        var $grid = $(".grid").isotope({
-          itemSelector: ".all",
-          percentPosition: true,
-          masonry: {
-            columnWidth: ".all"
-          }
-        })
-        $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+    // Initialisation de l'accordéon
+    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
-        $('.accordion a').click(function(j) {
-            var dropDown = $(this).closest('li').find('.content');
+    // Gestion des clics sur l'accordéon
+    $('.accordion a').click(function(j) {
+        var dropDown = $(this).closest('li').find('.content');
 
-            $(this).closest('.accordion').find('.content').not(dropDown).slideUp();
+        $(this).closest('.accordion').find('.content').not(dropDown).slideUp();
 
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-            } else {
-                $(this).closest('.accordion').find('a.active').removeClass('active');
-                $(this).addClass('active');
-            }
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).closest('.accordion').find('a.active').removeClass('active');
+            $(this).addClass('active');
+        }
 
-            dropDown.stop(false, true).slideToggle();
+        dropDown.stop(false, true).slideToggle();
 
-            j.preventDefault();
-        });
- 
+        j.preventDefault();
+    });
 });
-
-

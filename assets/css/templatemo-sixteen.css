@@ -591,6 +591,24 @@ header .navbar {
 	margin-top: 12px;
 }
 
+.col-md-4 {
+	position: relative;
+  }
+
+  .product-item {
+	overflow: hidden;
+  }
+
+  .voirtous {
+	transition: transform 0.3s, filter 0.3s;
+  }
+
+  .voirtous:hover {
+	transform: scale(1.05);
+	filter: brightness(0.5);
+  }
+  
+
 
 
 
@@ -1073,9 +1091,12 @@ footer .inner-content p a {
 		right: 0;
 		bottom: 0;
 	}
+	.best-features {
+		text-align: center; /* Réinitialise le centrage du texte */
+	  }
 	img.ecommerce{
-		display: flex;
-    	align-items: center;
+		margin: 0 auto; /* Centre l'image horizontalement */
+    display: block; /* Assurez-vous que l'image est un bloc pour appliquer la marge automatique */
 	}
 }
 
