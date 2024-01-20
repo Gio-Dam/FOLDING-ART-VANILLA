@@ -479,8 +479,6 @@ header .navbar {
 }
 
 
-
-
 /* Best Features */
 
 .about-features {
@@ -1359,6 +1357,25 @@ a h4  {
 	height: 100%;
 	object-fit: cover; /* Ajuste la taille de l'image pour couvrir complètement le cercle */
   }
+
+  .map-container {
+	width: 100%;
+	max-width: 800px; /* Ajustez la largeur maximale selon vos besoins */
+	margin: 20px auto;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 56.25%; /* Ratio 16:9 pour maintenir les proportions de la carte */
+}
+
+/* Cadre de l'iframe de la carte */
+.map-container iframe {
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+}
 
 /* Ajout de styles pour les écrans plus petits (responsive) */
 @media screen and (max-width: 768px) {
