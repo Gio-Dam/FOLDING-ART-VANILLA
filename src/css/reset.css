@@ -138,5 +138,6 @@ html {
 }
 
 :root {
-    --color: #fff;
+    --background-color: #fff;
+    --primary-color: #f33f3f;
 }

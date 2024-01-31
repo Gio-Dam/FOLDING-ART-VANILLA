@@ -2,7 +2,8 @@ import "./css/App.css";
 
 import { Outlet, RouterProvider, createHashRouter, useRouteError } from "react-router-dom";
 
-import { Accueil } from "./pages";
+import { Navbar } from "./components";
+import { Accueil, Boutique, Contact } from "./pages";
 
 const hashrouter = createHashRouter([
     {
@@ -14,25 +15,41 @@ const hashrouter = createHashRouter([
                 path: "",
                 element: <Accueil />,
             },
+            {
+                path: "boutique",
+                children: [
+                    {
+                        path: "",
+                        element: <Boutique />,
+                    },
+                ],
+            },
+            {
+                path: "contact",
+                children: [
+                    {
+                        path: "",
+                        element: <Contact />,
+                    },
+                ],
+            },
         ],
     },
 ]);
 
 function PageError() {
-    const error = useRouteError();
-    console.log(error);
+    console.error(useRouteError());
     return (
-        <>
-            <main>
-                <h1>&#x26A0; Une erreur est survenue &#x26A0;</h1>
-            </main>
-        </>
+        <main>
+            <h1>&#x26A0; Une erreur est survenue &#x26A0;</h1>
+        </main>
     );
 }
 
 function Root() {
     return (
         <>
+            <Navbar />
             <Outlet />
         </>
     );
