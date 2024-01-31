@@ -2,8 +2,8 @@ import "./css/App.css";
 
 import { Outlet, RouterProvider, createHashRouter, useRouteError } from "react-router-dom";
 
-import { Navbar } from "./components";
-import { Accueil, Boutique, Contact } from "./pages";
+import { Footer, Navbar } from "./components";
+import { Accueil, Boutique, Contact, ProductPage } from "./pages";
 
 const hashrouter = createHashRouter([
     {
@@ -21,6 +21,10 @@ const hashrouter = createHashRouter([
                     {
                         path: "",
                         element: <Boutique />,
+                    },
+                    {
+                        path: ":productName",
+                        element: <ProductPage />,
                     },
                 ],
             },
@@ -51,6 +55,7 @@ function Root() {
         <>
             <Navbar />
             <Outlet />
+            <Footer />
         </>
     );
 }

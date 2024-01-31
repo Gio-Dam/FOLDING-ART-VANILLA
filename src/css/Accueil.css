@@ -1,0 +1,28 @@
+.banner-container {
+    display: flex;
+    justify-content: center;
+    padding: 300px 0px;
+    background-image: url("../assets/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        a:nth-child(1) {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            padding-bottom: 20px;
+        }
+        a:nth-child(2) {
+            font-weight: 500;
+            color: black;
+            font-size: 3rem;
+            letter-spacing: 5px;
+        }
+    }
+}
