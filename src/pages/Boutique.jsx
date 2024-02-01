@@ -1,7 +1,8 @@
 import "../css/Boutique.css";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+import { Carousel } from "../components";
 import { ProductCard } from "../components";
 import useFetch from "../hook/api";
 
@@ -10,12 +11,7 @@ export function Boutique() {
 
     return (
         <>
-            <div className="banner-container">
-                <div>
-                    <Link to="boutique">NOUVELLE COLLECTION</Link>
-                    <Link to="boutique">MARVEL</Link>
-                </div>
-            </div>
+            <Carousel />
             {error ? (
                 <p>Erreur lors du chargement du contenu de la boutique</p>
             ) : (

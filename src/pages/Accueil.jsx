@@ -1,16 +1,11 @@
 import "../css/Accueil.css";
 
-import { Link } from "react-router-dom";
+import { Carousel } from "../components";
 
 export function Accueil() {
     return (
         <>
-            <div className="banner-container">
-                <div>
-                    <Link to="boutique">BOUTIQUE</Link>
-                    <Link to="boutique">ALLEZ-Y POUR VOIR TOUTES LES OEUVRES</Link>
-                </div>
-            </div>
+            <Carousel />
             <div className="new-product"></div>
             <div className="howto-command"></div>
             <div className="all-collabs"></div>
