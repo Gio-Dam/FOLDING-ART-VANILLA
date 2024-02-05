@@ -7,7 +7,7 @@ export default function useFetch(method, endpoint, arg) {
 
     const options = {
         method: method,
-        url: `https://d27phpsk-3000.euw.devtunnels.ms/${endpoint}/${arg}`,
+        url: `https://r77s73sc-3000.uks1.devtunnels.ms/${endpoint}/${arg}`,
     };
 
     const fetchData = async () => {

@@ -23,8 +23,13 @@ const hashrouter = createHashRouter([
                         element: <Boutique />,
                     },
                     {
-                        path: ":productName",
-                        element: <ProductPage />,
+                        path: ":folder",
+                        children: [
+                            {
+                                path: ":file",
+                                element: <ProductPage />,
+                            },
+                        ],
                     },
                 ],
             },

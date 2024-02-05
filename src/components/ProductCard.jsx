@@ -3,7 +3,7 @@ import "../css/ProductCard.css";
 import useFetch from "../hook/api";
 
 export function ProductCard(item) {
-    const { data, error } = useFetch("GET", "product", item.product);
+    const { data, error } = useFetch("GET", `data/${item.folder}`, item.product);
     return (
         <>
             {error ? (

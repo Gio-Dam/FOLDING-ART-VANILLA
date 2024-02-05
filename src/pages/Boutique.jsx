@@ -2,12 +2,11 @@ import "../css/Boutique.css";
 
 import { NavLink } from "react-router-dom";
 
-import { Carousel } from "../components";
-import { ProductCard } from "../components";
+import { Carousel, ProductCard } from "../components";
 import useFetch from "../hook/api";
 
 export function Boutique() {
-    const { data, error } = useFetch("GET", "fetch", "product");
+    const { data, error } = useFetch("GET", "fetch", "all");
 
     return (
         <>
@@ -16,8 +15,8 @@ export function Boutique() {
                 <p>Erreur lors du chargement du contenu de la boutique</p>
             ) : (
                 data?.map((item, index) => (
-                    <NavLink to={item} key={index}>
-                        <ProductCard product={item} key={index} />
+                    <NavLink to={`${item.folder}/${item.file}`} key={index}>
+                        <ProductCard product={item.file} folder={item.folder} key={index} />
                     </NavLink>
                 ))
             )}

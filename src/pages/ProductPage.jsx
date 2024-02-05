@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../hook/api";
 
 export function ProductPage() {
-    const { data, error } = useFetch("GET", "product", useParams().productName);
+    const { data, error } = useFetch("GET", `data/${useParams().folder}`, useParams().file);
 
     return (
         <>
