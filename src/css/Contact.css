@@ -1,28 +1,165 @@
-.banner-container {
+.content-container {
+    padding-left: 35px;
+    padding-right: 35px;
+
+    h1 {
+        padding-top: 80px;
+        font-weight: 400;
+        font-size: 1.7rem;
+        padding-bottom: 20px;
+    }
+
+    hr {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+.content-map {
     display: flex;
-    justify-content: center;
-    padding: 300px 0px;
-    background-image: url("../assets/banner.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    padding-top: 50px;
+    flex-direction: row;
+    gap: 200px;
 
-    div {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        a:nth-child(1) {
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 1.4rem;
+    div:nth-child(1) iframe {
+        border-radius: 3%;
+    }
+    div:nth-child(2) {
+        h3 {
             padding-bottom: 20px;
-        }
-        a:nth-child(2) {
             font-weight: 500;
-            color: black;
-            font-size: 3rem;
-            letter-spacing: 5px;
+            font-size: 17px;
+            color: #1366b1;
+        }
+
+        p {
+            font-weight: lighter;
+            font-size: 14px;
+            line-height: 1.4rem;
+            padding-bottom: 10px;
+        }
+
+        .content-mail {
+            color: #1366b1;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+
+                a {
+                    width: 50px;
+                    height: 50px;
+                    display: inline-block;
+                    line-height: 55px;
+                    background-color: #eee;
+                    font-size: 18px;
+                    text-align: center;
+                    transition: all 0.4s;
+                }
+
+                :hover {
+                    background-color: var(--primary-color);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.content-form {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: row;
+
+    .form-input {
+        width: 50%;
+
+        form div {
+            input {
+                font-size: 14px;
+                width: 100%;
+                height: 44px;
+                display: inline-block;
+                line-height: 42px;
+                border: 1px solid #eee;
+                margin-bottom: 30px;
+            }
+            .form-submit {
+                background-color: #f33f3f;
+                color: #fff;
+                font-size: 14px;
+                text-transform: capitalize;
+                font-weight: 300;
+                padding: 3px 20px;
+                border-radius: 5px;
+                display: inline-block;
+                transition: all 0.3s;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        form div textarea {
+            font-size: 14px;
+            width: 100%;
+            min-width: 100%;
+            min-height: 120px;
+            height: 120px;
+            max-height: 180px;
+            border: 1px solid #eee;
+            border-radius: 0px;
+            margin-bottom: 30px;
+        }
+    }
+    .form-accordion {
+        width: 50%;
+
+        .accordion-item h3 {
+            font-weight: 500;
+            font-size: 17px;
+            user-select: none;
+            padding-bottom: 20px;
+            transition: color 0.4s;
+        }
+
+        .accordion-header {
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            display: none;
+
+            p {
+                font-weight: lighter;
+                font-size: 14px;
+                line-height: 1.4rem;
+                padding-bottom: 10px;
+            }
+        }
+
+        .accordion-item.active {
+            h3 {
+                color: var(--primary-color);
+                padding-bottom: 0px;
+            }
+
+            .accordion-content {
+                display: block;
+            }
         }
     }
 }
