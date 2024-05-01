@@ -3,6 +3,23 @@
 
   <head>
 
+    <script>
+      // Fonction pour recharger la page deux fois
+      function reloadPage() {
+          // Vérifier le nombre de rechargements effectués
+          if (localStorage.getItem('reloads') === null) {
+              localStorage.setItem('reloads', 1); // Si c'est la première fois, initialiser à 1
+          } else {
+              let reloads = parseInt(localStorage.getItem('reloads')); // Récupérer le nombre de rechargements
+              if (reloads < 2) {
+                  localStorage.setItem('reloads', reloads + 1); // Incrémenter le nombre de rechargements
+                  location.reload(); // Recharger la page
+              }
+          }
+      }
+      // Appeler la fonction au chargement de la page
+      window.onload = reloadPage;
+  </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -125,7 +142,7 @@
                       <div class="down-content">
                         <a href="Produits a vendre/lapin-velo1/lapin-velo1.html"><h4>Cadre Lapin sur un vélo</h4></a>
                         <h6>20€</h6>
-                        <p>Plongez dans le printemps avec ce cadre mettant en scène un lapin sur un vélo, au cœur d'un décor floral vibrant.</p>
+                        <p>Plongez dans le printemps avec ce cadre mettant en scène un lapin sur un vélo, au cœur d'un décor floral vibrant.<br><br></p>
                         <span>Nouvelle collection</span>
                       </div>
                     </div>
@@ -137,7 +154,7 @@
                       <div class="down-content">
                         <a href="Produits a vendre/cloches-paques1/cloches-paques1.html"><h4>Carte Cloches de Pâques</h4></a>
                         <h6>9€</h6>
-                        <p>Une carte charmante évoquant l'esprit de Pâques avec deux cloches décorées de fleurs et de feuilles.</p>
+                        <p>Une carte charmante évoquant l'esprit de Pâques avec deux cloches décorées de fleurs et de feuilles.<br><br></p>
                         <span>Nouvelle collection</span>
                       </div>
                     </div>
@@ -150,7 +167,7 @@
                       <div class="down-content">
                         <a href="Produits a vendre/lapin-easter1/lapin-easter1.html"><h4>Carte lapin de pâques</h4></a>
                         <h6>20€</h6>
-                        <p>Plongez dans l'esprit de Pâques avec notre cadre artistique, mettant en valeur un lapin finement découpé.</p>
+                        <p>Plongez dans l'esprit de Pâques avec notre cadre artistique, mettant en valeur un lapin finement découpé.<br><br></p>
                         <span>Nouvelle collection</span>
                       </div>
                     </div>
@@ -162,7 +179,7 @@
                       <div class="down-content">
                         <a href="Produits a vendre/lapin-papillon1/lapin-papillon1.html"><h4>Carte Lapin et Papillon</h4></a>
                         <h6>9€</h6>
-                        <p>Capturez l'esprit printanier avec cette carte mettant en scène un lapin de Pâques accompagné d'un papillon.</p>
+                        <p>Capturez l'esprit printanier avec cette carte mettant en scène un lapin de Pâques accompagné d'un papillon.<br><br></p>
                         <span>Nouvelle collection</span>
                       </div>
                     </div>
@@ -177,7 +194,7 @@
                         <a href="Produits a vendre/Cadre Roi Lion1/cadre_roi_lion1.html"><h4>Cadre Le Roi Lion</h4></a>
                         <h6>23€</h6>
                         <p>Plongez dans l'univers du Roi Lion avec ce cadre, où Simba repose dans les bras du
-                                    singe sous un coucher de soleil.</p>
+                                    singe sous un coucher de soleil.<br><br></p>
                         <span></span>
                       </div>
                     </div>
